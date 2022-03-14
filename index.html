@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Allyson04</title>
+    <style>
+        a {
+            color: blue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const me = new Object();
+
+        function createUserSocialMediaClass(informationField, information) {    
+        informationField.forEach((element, index, array) => {
+                me[element] = information[index]
+                //console.log(element)
+
+            })
+        }
+
+        jQuery(document).ready(function(){
+            createUserSocialMediaClass(["name", "username", "LinkedIn", "GitHub", "GitLab", "e-mail"], ["Allyson Eduardo", "Allyson04", "<a href='https://linkedin.com/in/allyson04'>in/allyson04</a>", "<a href='https://github.com/Allyson04'>github.com/Allyson04</a>", "<a href='https://gitlab.com/Allyson04'>gitlab.com/Allyson04</a>", "<a href='emailto:allysoneduardo04@gmail.com'>allysoneduardo04@gmail.com</a>"])
+
+            console.table(me)
+
+            $("pre").append("<main>" + JSON.stringify(me, null, '\t') + "</main>")
+        })
+    </script>
+</head>
+<body>
+    <pre id="poetry">
+
+        Before this existed nothing
+        or at least
+        nothing particularly appealing...
+
+    </pre>
+    
+    <footer>Made by Allyson04</footer>
+</body>
+</html>
