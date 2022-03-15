@@ -1,0 +1,7 @@
+#nginx main files
+
+/contrib
+/docs
+/logs
+/temp
+nginx.exe
